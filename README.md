@@ -1,6 +1,11 @@
 # How to develop:
 
-package charts
+Create new package
+```shell script
+helm create helm-chart-sources/<package_name>
+```
+
+Package charts
 ```shell script
 helm package helm-chart-sources/*
 ```
