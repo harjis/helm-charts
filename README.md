@@ -5,7 +5,12 @@ Create new package
 helm create helm-chart-sources/<package_name>
 ```
 
-Package charts
+Package a chart
+```shell script
+helm package helm-chart-sources/<package_name>
+```
+
+Package all charts
 ```shell script
 helm package helm-chart-sources/*
 ```
