@@ -4,6 +4,10 @@
 
 replicaCount: 1
 
+# Do not change or override these
+baseBackendImage: d0rka/folder-service-backend
+baseFrontendImage: d0rka/folder-service-frontend
+
 # This is the docker image version number
 applicationVersion: 0.1.1
 
