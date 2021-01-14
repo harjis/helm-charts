@@ -22,7 +22,7 @@ spec:
           env:
             -
               name: PGHOST
-              value: postgres-cluster-ip-service
+              value: folder-service-postgres-cluster-ip-service
             -
               name: PGUSER
               value: postgres
@@ -72,27 +72,27 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: postgres
+      component: folder-service-postgres
   template:
     metadata:
       labels:
-        component: postgres
+        component: folder-service-postgres
     spec:
       volumes:
         -
-          name: postgres-storage
+          name: folder-service-postgres-storage
           persistentVolumeClaim:
             claimName: folder-service-database-pvc
       containers:
         -
-          name: postgres
+          name: folder-service-postgres
           image: postgres
           ports:
             -
               containerPort: 5432
           volumeMounts:
             -
-              name: postgres-storage
+              name: folder-service-postgres-storage
               mountPath: /var/lib/postgresql/data
               subPath: postgres
           env:
