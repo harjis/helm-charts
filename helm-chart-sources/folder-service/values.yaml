@@ -4,4 +4,7 @@
 
 replicaCount: 1
 
+# This is the docker image version number
+applicationVersion: 0.1.1
+
 resources: {}
