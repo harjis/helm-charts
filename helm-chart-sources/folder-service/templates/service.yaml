@@ -31,7 +31,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    component: postgres
+    component: folder-service-postgres
   ports:
     -
       port: 5432
