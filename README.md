@@ -81,3 +81,11 @@ spec:
 ````shell script
 helm uninstall authenticator
 ````
+
+## Folder-service
+
+1. Install all the services
+
+```shell script
+helm install folder-service harjis-charts/folder-service
+```
