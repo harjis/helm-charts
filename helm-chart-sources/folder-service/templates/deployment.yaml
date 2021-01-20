@@ -50,11 +50,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      component: web
+      component: folder-service-web
   template:
     metadata:
       labels:
-        component: web
+        component: folder-service-web
     spec:
       containers:
         -

@@ -18,7 +18,7 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    component: web
+    component: folder-service-web
   ports:
     -
       port: 3001
