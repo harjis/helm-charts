@@ -1,0 +1,14 @@
+# Default values for authentication-service.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+# Do not change or override these
+baseBackendImage: d0rka/authentication-service-backend-proxy
+baseFrontendImage: d0rka/authentication-service-frontend
+
+# This is the docker image version number
+applicationVersion: 0.1.0
+
+resources: {}
