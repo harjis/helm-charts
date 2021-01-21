@@ -33,11 +33,13 @@ helm repo add harjis-charts https://harjis.github.io/helm-charts/
 
 # How to install
 
-## Authenticator
+## Authentication-service
 
 1. Create values.yaml file in the repository 
-where authenticator is going to be installed from
+where authentication-service is going to be installed from. These values should point to the routing backend
+proxy or the actual backend itself (if there is only one backend)
 
+authentication_service_values.yaml:
 ```yaml
 backendHost: backend-cluster-ip-service
 backendPort: 3000
@@ -49,12 +51,12 @@ kubectl create secret generic oktaclientid --from-literal OKTA_CLIENTID=my-id
 kubectl create secret generic oktaissuer --from-literal OKTA_ISSUER=my-issuer
 ```
 
-3. Install authenticator with
+3. Install authentication-service with
 ````shell script
-helm install authenticator harjis-charts/authenticator -f authenticator_values.yaml
+helm install authentication-service harjis-charts/authentication-service -f authentication_service_values.yaml
 ````
 
-5. Route all backend traffic through the authenticator:
+5. Route all backend traffic through the authenticator & expose the frontend on root path:
 
 ```
 apiVersion: networking.k8s.io/v1
@@ -67,19 +69,23 @@ spec:
   rules:
     - http:
         paths:
-
+          -
+            path: /
+            backend:
+              serviceName: authentication-service-frontend-cluster-ip-service
+              servicePort: 3001
           - path: /api/
             pathType: Prefix
             backend:
               service:
-                name: authenticator-cluster-ip-service
+                name: authentication-service-frontend-cluster-ip-service
                 port:
-                  number: 5000 
+                  number: 3000
 ```
 
 6. Can be uninstalled with
 ````shell script
-helm uninstall authenticator
+helm uninstall authentication-service
 ````
 
 ## Folder-service
