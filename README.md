@@ -25,6 +25,11 @@ Merge to existing index:
 helm repo index --url https://harjis.github.io/helm-charts/ --merge index.yaml .
 ```
 
+Lint charts:
+````shell script
+helm lint helm-chart-sources/*
+````
+
 # How to use:
 
 ```shell script

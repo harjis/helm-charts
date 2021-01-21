@@ -3,7 +3,7 @@ entries:
   authentication-service:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-21T14:39:03.625246+02:00"
+    created: "2021-01-21T14:45:51.27724+02:00"
     description: A Helm chart for Kubernetes
     digest: 7b8637a1a6a90dca20a2099dfeb8db3e02f1c03d5b80d72cf3f2879214299809
     name: authentication-service
@@ -11,21 +11,10 @@ entries:
     urls:
     - https://harjis.github.io/helm-charts/authentication-service-0.1.0.tgz
     version: 0.1.0
-  authenticator:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-21T13:39:57.321031+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 83db78ddb5c5e1ec1bd6597d42b0da8a37c528d47ce2a4d15c31a7e84f4a7466
-    name: authenticator
-    type: application
-    urls:
-    - https://harjis.github.io/helm-charts/authenticator-0.1.0.tgz
-    version: 0.1.0
   folder-service:
   - apiVersion: v2
     appVersion: 1.16.7
-    created: "2021-01-21T14:39:03.626405+02:00"
+    created: "2021-01-21T14:45:51.277632+02:00"
     description: A Helm chart for Kubernetes
     digest: c5abe44ce3e80a533c3a6706c822f2f4a47bd8f59fbb8fe013a119ce1ea7541e
     name: folder-service
@@ -35,7 +24,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.6
-    created: "2021-01-21T14:39:03.625925+02:00"
+    created: "2021-01-21T14:45:51.277441+02:00"
     description: A Helm chart for Kubernetes
     digest: 20f6c81c5116ab178751d062ceb91e919b7117e8bf04f3a51caf60baf3cb3e32
     name: folder-service
@@ -43,4 +32,4 @@ entries:
     urls:
     - https://harjis.github.io/helm-charts/folder-service-0.1.6.tgz
     version: 0.1.6
-generated: "2021-01-21T14:39:03.624452+02:00"
+generated: "2021-01-21T14:45:51.276904+02:00"
